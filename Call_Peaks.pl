@@ -147,7 +147,7 @@ elsif($resolution eq "high"){
 }
 
 # cleaning
-system("rm $output.base.merge $output.base.filt $output.DEGs $output.count $output.site");
+system("rm $output.base.merge $output.DEGs $output.count $output.site");
 
 ## merge to region
 # sort
