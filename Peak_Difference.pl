@@ -170,9 +170,6 @@ system("Rscript ./Scripts/peak_difference_4_rep2.R $output.total.tab.test $outpu
 # format peaks with difference
 system("perl ./Scripts/single_base_peaks_calling_17.pl $output.IN.DEGs $output.IN.count $output.IP.DEGs $output.IP.count $output.all.merge $output.all.merge.dif 0 0 0 0");
 
-# cleaning
-system("rm $output.total.tab.test $output.IN.DEGs $output.IP.DEGs $output.IN.count $output.IP.count");
-
 # cutoff for peaks
 system(`awk '((\$13 >= $CPM && \$15 >= $CPM) && ((\$17 > $fc && \$18 < $adj_p) || (\$19 > $fc && \$20 < $adj_p)))' $output.all.merge.dif | awk '\{print \$0,"\t",\$19 - \$17\}' > $output.all.merge.dif.filter`);
 
@@ -215,4 +212,5 @@ elsif($resolution eq "high"){
 }
 
 # Cleaning
-system("rm $output.all.merge $output.all.merge.dif $output.all.merge.dif.filter $output.all.merge.dif.filter.std $output.all.merge.dif.filter.std.filter $output.all.merge.dif.filter.std.filter.merge $output.all.merge.dif.filter.std.filter.merge.filt $output.all.merge.dif.filter.std.merge.filt.dif");
+system("rm $output.total.tab.test $output.IN.DEGs $output.IP.DEGs $output.IN.count $output.IP.count");
+system("rm $output.all.merge $output.all.merge.dif $output.all.merge.dif.filter $output.all.merge.dif.filter.std $output.all.merge.dif.filter.std.filt $output.all.merge.dif.filter.std.filt.merge $output.all.merge.dif.filter.std.filt.merge.filt $output.all.merge.dif.filter.std.merge $output.all.merge.dif.filter.std.merge.filt $output.all.merge.dif.filter.std.merge.filt.dif");
