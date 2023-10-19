@@ -205,4 +205,4 @@ system("rm *.test *.DEGs2 *.count2");
 #### cutoff for peaks
 system("perl ./Scripts/single_base_peaks_calling_11.pl $output.site.std.merge.peak.dif $output.site.std.merge.peak.raw");
 system(`awk '\$18 < $adj_p && \$17 > $fc && ((\$13 >= $CPM && \$14 >= $CPM) || (\$15 >= $CPM && \$16 >= $CPM))' $output.site.std.merge.peak.raw | msort -k f1 -k f4 -k n2 -k n3 > $output.site.std.merge.peak.dif.filter`);
-system("rm $output.site.std.merge.std $output.site.std.merge.peak $output.site.std.merge.peak.std $output.site.std.merge.peak.dif *.dif2");
+system("rm $output.site.std.merge.std $output.site.std.merge.peak $output.site.std.merge.peak.std $output.site.std.merge.peak.dif");
