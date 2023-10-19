@@ -213,4 +213,4 @@ elsif($resolution eq "high"){
 
 # Cleaning
 system("rm $output.total.tab.test $output.IN.DEGs $output.IP.DEGs $output.IN.count $output.IP.count");
-system("rm $output.all.merge $output.all.merge.dif $output.all.merge.dif.filter $output.all.merge.dif.filter.std $output.all.merge.dif.filter.std.filt $output.all.merge.dif.filter.std.filt.merge $output.all.merge.dif.filter.std.filt.merge.filt $output.all.merge.dif.filter.std.merge $output.all.merge.dif.filter.std.merge.filt $output.all.merge.dif.filter.std.merge.filt.dif");
+system("rm $output.all.merge $output.all.merge.dif $output.all.merge.dif.filter $output.all.merge.dif.filter.std $output.all.merge.dif.filter.std.filt $output.all.merge.dif.filter.std.merge $output.all.merge.dif.filter.std.merge.filt $output.all.merge.dif.filter.std.merge.filt.dif");
